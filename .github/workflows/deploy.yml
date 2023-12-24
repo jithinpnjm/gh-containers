@@ -23,10 +23,10 @@ jobs:
       PORT: 8080
     services:
       mongodb:
-        image: mongodb
+        image: mongo
         env:
-          MONGO_INITDB_ROOT_USERNAME: admin
-          MONGO_INITDB_ROOT_PASSWORD: admin
+          MONGO_INITDB_ROOT_USERNAME: $MONGODB_USERNAME
+          MONGO_INITDB_ROOT_PASSWORD: $MONGODB_PASSWORD
           MONGO_INITDB_DATABASE: admin   
     steps:
       - name: Get Code
